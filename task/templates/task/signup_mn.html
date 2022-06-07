@@ -1,0 +1,20 @@
+{% extends 'task/base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<div align="center">
+    <img src="{% static 'task/signupdot.svg' %}" />
+    <p>회원가입을 진행해주세요.</p>
+</div>
+<form action="{% url 'signup_mn' %}" method="post">
+    {% csrf_token %}
+    이메일: <br> <input type="text" name="email" placeholder="boltnnut@gmail.com" size="30"> <br><br>
+    비밀번호:<br> <input type="text" name="password" placeholder="비밀번호를 입력해 주세요." size="30"> <br><br>
+    비밀번호 확인:<br> <input type="text" name="password2" placeholder="비밀번호를 한 번 더 입력해 주세요." size="30"> <br><br>
+    이름:<br> <input type="text" name="name" placeholder="이름을 입력해 주세요." size="30"> <br><br>
+    휴대전화:<br> <input type="text" name="telephone" placeholder="-없이 숫자만 입력해 주세요." size="30"> <br><br>
+    상호명:<br> <input type="text" name="company" id="company" placeholder="근무하고 계신 회사명을 입력해 주세요." size="30">
+    <br><br>
+    <input type="image" id="image" alt="가입하기" src="{% static 'task/registration.png' %}">
+</form>
+{% endblock %}

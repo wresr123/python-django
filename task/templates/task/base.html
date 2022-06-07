@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>볼트앤너트</title>
+</head>
+<body>
+   <p align="right">
+       <a href="{% url 'home' %}">홈</a>&nbsp;&nbsp;
+       <a href="{% url 'select' %}">회원가입/파트너등록</a>&nbsp;&nbsp;
+       <a href="{% url 'login' %}">로그인</a>&nbsp;&nbsp;
+   </p>
+   <hr>
+   {% block content %}
+   {% endblock %}
+</body>
+</html>
